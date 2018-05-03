@@ -7,7 +7,9 @@ class FishingVessel extends CI_Controller {
 
     public function index()
     {
-        echo 'Fishing Vessel';
+        $this->load->view('header');
+        $this->load->view('fishing-vessel/index');
+        $this->load->view('footer');       
     }
 
     public function all()
@@ -15,7 +17,17 @@ class FishingVessel extends CI_Controller {
         echo 'Show all Vessels...';
     }
 
+    public function new()
+    {
+        $this->load->view('header');
+        $this->load->view('fishing-vessel/new-vessel');
+        $this->load->view('footer');
+    }
 
+    public function new_success()
+    {
+
+    }
 
 }
 
