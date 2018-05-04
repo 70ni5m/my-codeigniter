@@ -9,8 +9,13 @@
                     <input type="text" class="form-control">
                 </div>
                     <div class="form-group">
+                    <label for="">ประเทศ</label>
                         <select class="form-control">
-                            <option>Default select</option>
+                        <?php foreach ($country_list as $country): ?>
+                            <option>
+                                <?php echo $country['Name'] ?>
+                            </option>
+                        <?php endforeach ?>
                         </select>
                     </div>
                     
