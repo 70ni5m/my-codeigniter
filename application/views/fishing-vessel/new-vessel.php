@@ -8,8 +8,14 @@
                     <label for="">ชื่อ</label>
                     <input type="text" class="form-control">
                 </div>
-                <button type="button" class="btn btn-primary">เพิ่ม</button>
-                <button type="button" class="btn btn-secondary">ล้าง</button>
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option>Default select</option>
+                        </select>
+                    </div>
+                    
+                <button type="button" class="btn btn-primary btn-lg">เพิ่ม</button>
+                <button type="button" class="btn btn-secondary btn-lg">ล้าง</button>
             </form>
         </div>
     <div class="col-lg-3 col-md-1 col-sm-0"></div>
