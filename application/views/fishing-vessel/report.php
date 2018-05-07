@@ -1,0 +1,17 @@
+<div class="row">
+<div class="col6">
+
+    <div class="card">
+        <div class="card-header">
+        จำนวนเรือแยกตามประเภท
+        </div>
+        <div class="card-body">
+            <div id="bar-chart">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col6">
+</div>
+</div>
