@@ -40,12 +40,30 @@ class FishingVessel extends CI_Controller {
     public function create()
     {
 
-        // var_dump($_POST);
-        $this->load->model('fishingvessel_model');
-        $this->fishingvessel_model->save_new_vessel();
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('vesselName', 'ชื่อเรือ', 'required|max_length[10]', array('required' => 'ช่วยกรอกชื่อสำเภาด้วยนะออเจ้า'));
+
+        if($this->form_validation->run() == false)
+        {
+        $this->load->model('country_model');
+        $result = $this->country_model->get_all();
+
+        $data['country_list'] = $result;
+        $data['title'] = "เพิ่มข้อมูลเรือประมง";
+        
+        $this->load->view('header', $data);
+        $this->load->view('fishing-vessel/new-vessel', $data);
+        $this->load->view('footer');
+        }
+
+        else{
+            $this->load->model('fishingvessel_model');
+         
+            $this->fishingvessel_model->save_new_vessel();
 
         
-        redirect('fishingvessel','refresh');
+            redirect('fishingvessel','refresh');
+        }
     }
 
     public function delete()
