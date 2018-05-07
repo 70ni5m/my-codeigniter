@@ -40,6 +40,8 @@ class FishingVessel extends CI_Controller {
     public function create()
     {
 
+        // เดี๋ยวจะใส่ code upload ไฟล์
+
         $this->load->library('form_validation');
         $this->form_validation->set_rules('vesselName', 'ชื่อเรือ', 'required|max_length[10]', array('required' => 'ช่วยกรอกชื่อสำเภาด้วยนะออเจ้า'));
 
