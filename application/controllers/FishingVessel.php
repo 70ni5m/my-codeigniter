@@ -46,8 +46,12 @@ class FishingVessel extends CI_Controller {
 
         
         redirect('fishingvessel','refresh');
-        
+    }
 
+    public function delete()
+    {
+
+        
     }
 
     public function new_success()
