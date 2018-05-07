@@ -16,8 +16,8 @@ foreach($vessels as $ship):
             ?>
                 <input type="submit" value="ลบ" class="btn btn-primary"/>
             </form>
-            </div>
-        
+        </div>
+        <img src="<?php echo base_url($ship['imagePath']) ?>" class="card-img-bottom">
     </div>
 </div>
 <?php
