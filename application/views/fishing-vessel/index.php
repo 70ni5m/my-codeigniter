@@ -10,7 +10,14 @@ foreach($vessels as $ship):
             <h5 class="card-title"></h5>
             <?php echo $ship['Country_ID']?>
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <?php
+                $hidden['vesselID'] =$ship['id'];
+                echo form_open('fishingvessel/delete_vessel', '', $hidden);
+            ?>
+                <input type="submit" value="ลบ" class="btn btn-primary"/>
+            </form>
             </div>
+        
     </div>
 </div>
 <?php
